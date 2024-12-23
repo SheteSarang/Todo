@@ -1,6 +1,9 @@
+import tailwindConfig from '../../tailwind.config'
+
 import React, {useState} from 'react'
 import { useDispatch} from 'react-redux'
 import {addTodo} from '../features/todo/todoSlice'
+
 function AddTodo() {
     const [input, setInput] = React.useState('')
     const dispatch = useDispatch()
@@ -19,6 +22,7 @@ function AddTodo() {
     onChange={(e) => setInput(e.target.value)}
   />
   <button
+    onClick={addTodoHandler}
     type="submit"
     className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
     

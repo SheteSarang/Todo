@@ -1,8 +1,8 @@
-import {congifureStore} from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
 import todoReducer from '../features/todo/todoSlice';
-import reducer from '../features/todo/todoSlice';
+import reducer from '../features/todo/todoSlice.js';
 
 
-export const store = congifureStore({
+export const store = configureStore({
     reducer: todoReducer
 })
