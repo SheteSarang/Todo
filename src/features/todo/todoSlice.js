@@ -16,7 +16,7 @@ export const todoSlice = createSlice({
         const newId = state.todos.length + 1;
       
         // Add the new todo with the generated unique id
-        state.todos.push({
+        state.todos.push({    // Why this push method?- to add it in the array
           id: newId,         // The unique id for the new todo
           text: action.payload // The text of the new todo from the payload
         });
